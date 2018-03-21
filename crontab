@@ -1,0 +1,4 @@
+# All environment variables starting with BACKUP will be prepended right before this line
+SHELL=/bin/bash
+0 * * * * root /usr/local/sbin/sql_backup.sh >> /var/log/cron.log 2>&1
+# Places backups in the backup directory at every full hour, replacing existing ones
